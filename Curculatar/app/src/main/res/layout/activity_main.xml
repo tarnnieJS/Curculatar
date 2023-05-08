@@ -8,7 +8,29 @@
 
 
     <EditText
+        android:inputType="numberDecimal"
         android:id="@+id/editTextInputNumber"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        android:background="@color/transparent"
+        android:fontFamily="@font/sukhumvit_set_medium"
+        android:gravity="bottom"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:textAlignment="textEnd"
+        android:textSize="44sp"
+        android:maxLines="1"
+        android:maxLength="15"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="RtlCompat" />
+    <EditText
+        android:id="@+id/editTextInputNumberDefult"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:visibility="visible"
@@ -63,7 +85,7 @@
 
     <Button
         android:id="@+id/buttonZero"
-        android:layout_width="170dp"
+        android:layout_width="165dp"
         android:layout_height="80dp"
         android:textColor="@color/white"
         android:textSize="24dp"
