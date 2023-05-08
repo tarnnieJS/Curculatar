@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
 
 
     private val buttonKeysList = mutableListOf<ButtonKeysModel>()
+
+    
     private val keyList = mutableListOf<String>(
         "AC",
         "+/-",
@@ -393,8 +395,6 @@ class MainActivity : AppCompatActivity() {
 //        binding.editTextInputNumber.setText(formatResult(second.toDouble()))
 //
 //    }
-
-
     companion object {
         private const val SWIPE_THRESHOLD = 100
         private const val SWIPE_VELOCITY_THRESHOLD = 100
