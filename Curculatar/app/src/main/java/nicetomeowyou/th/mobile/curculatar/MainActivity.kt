@@ -22,6 +22,10 @@ class MainActivity : AppCompatActivity() {
     }
     private lateinit var gestureDetector: GestureDetector
 
+    //new line
+
+
+    
 
     private val buttonKeysList = mutableListOf<ButtonKeysModel>()
 
