@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     }
     private lateinit var gestureDetector: GestureDetector
 
-    //new line
+    //tarn new merge
 
 
 
