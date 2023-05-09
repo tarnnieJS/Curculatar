@@ -21,15 +21,7 @@ class MainActivity : AppCompatActivity() {
         ActivityMainBinding.inflate(layoutInflater)
     }
     private lateinit var gestureDetector: GestureDetector
-
-    //new line ;sfagl'agsgag
-
-
-
-
-
     private val buttonKeysList = mutableListOf<ButtonKeysModel>()
-
     private val keyList = mutableListOf<String>(
         "AC",
         "+/-",
