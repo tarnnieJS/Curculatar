@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private val buttonKeysList = mutableListOf<ButtonKeysModel>()
-    
+
     private val keyList = mutableListOf<String>(
         "AC",
         "+/-",
@@ -73,6 +73,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.editTextInputNumber.isCursorVisible = false
         binding.editTextInputNumber.isFocusable = false
+        binding.editTextInputNumberDefult.isCursorVisible = false
+        binding.editTextInputNumberDefult.isFocusable = false
         binding.editTextInputNumberSecond.isCursorVisible = false
         binding.editTextInputNumberSecond.isFocusable = false
         binding.buttonZero.setOnClickListener {
@@ -95,6 +97,7 @@ class MainActivity : AppCompatActivity() {
 //                }
 //            }
         }
+
         val keysListAdapter = ButtonAdapter(buttonKeysList, object : ButtonAdapter.OnClickListener {
             override fun onClick(position: Int, model: ButtonKeysModel) {
                 if (model.text == ".") {
@@ -219,7 +222,6 @@ class MainActivity : AppCompatActivity() {
 
             }
         })
-
         binding.recyclerView.apply {
             val layoutManager = GridLayoutManager(context, 4)
             this.layoutManager = layoutManager
@@ -231,7 +233,19 @@ class MainActivity : AppCompatActivity() {
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 if (s != null) {
-                    Log.e("ss",s.length.toString())
+//                    Log.e("ss",s.length.toString())
+//                    if (s.length == 4){
+//                        binding.editTextInputNumber.setText( StringBuilder(s).insert(s.length - 3, ",").toString())
+//                    }
+//                    if (s.length == 8){
+//                        binding.editTextInputNumber.setText( StringBuilder(s).insert(s.length - 7 , ",").toString())
+//                    }
+//                    if (s.length == 12){
+//                        binding.editTextInputNumber.setText( StringBuilder(s).insert(s.length - 11 , ",").toString())
+//                    }
+//                    if (s.length == 15){
+//                        binding.editTextInputNumber.setText( StringBuilder(s).insert(s.length - 14 , ",").toString())
+//                    }
                 }
             }
 
@@ -334,6 +348,10 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private fun setAdapter() {
+
+    }
+
     private fun summaryValue() {
         Log.e("first", firstNumber)
         Log.e("second", secondNumber)
@@ -363,8 +381,6 @@ class MainActivity : AppCompatActivity() {
                         binding.editTextInputNumberSecond.visibility = View.INVISIBLE
                         binding.editTextInputNumber.setText(formatResult(firstNumber.toDouble()))
                     }
-
-
                 }
 
                 "-" -> {

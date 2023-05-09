@@ -6,6 +6,7 @@
 
     <RelativeLayout
         android:id="@+id/inputKeyLayout"
+        android:clickable="true"
         android:background="@drawable/background_circle_orange"
         android:layout_width="80dp"
         android:layout_height="80dp"
